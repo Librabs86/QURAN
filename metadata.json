@@ -1,0 +1,6 @@
+{
+  "name": "Quran Teacher",
+  "description": "An interactive, spiritually calm classical Arabic recitation teacher supporting all 114 Surahs, with word-by-word audio lessons, tajweed guides, and real-time Gemini text-to-speech recitation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

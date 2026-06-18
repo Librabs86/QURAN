@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Amiri", "Playfair Display", Georgia, serif;
+}
+
+/* Custom visual refinements to render comfortable reading layouts */
+body {
+  background-color: #0c121e; /* atmospheric deep slate */
+  color: #f1f5f9; /* bright tail-slate readable text */
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: rgba(20, 184, 166, 0.3);
+  color: #ffffff;
+}
+
+/* Multi-color gradient and glitter animations */
+@keyframes glitter-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) translateY(0px) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) translateY(-7px) rotate(180deg); }
+}
+
+.glitter-rainbow-bg {
+  background: linear-gradient(-45deg, #fff5f7, #fdf4ff, #eef2ff, #f0f9ff, #f0fdfa, #fefce8, #fff1f2);
+  background-size: 300% 300%;
+  animation: glitter-bg 12s ease infinite;
+}
+
+.sparkling-element {
+  display: inline-block;
+  animation: sparkle-twinkle 3s ease-in-out infinite;
+}
+
+/* Beautiful text gradients for heading */
+.glow-title-rainbow {
+  background: linear-gradient(to right, #ec4899, #a855f7, #3b82f6, #10b981, #f59e0b, #ef4444);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter-bg 5s linear infinite;
+  display: inline-block;
+}
